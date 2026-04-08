@@ -1,0 +1,24 @@
+name: dyhtsagcn
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - openpyxl
+  - pytorch=2.3
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - pyg
+  - tqdm
+  -
+  - pip
+  - pip:
+      - networkx
