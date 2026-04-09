@@ -89,7 +89,7 @@ The orthologous network is filtered using `q_th`.
 
 ## 🧪 2. Training & Evaluation
 
-🔧 Entry Point
+## 🔧 Entry Point
 
 #### `train_and_test.py`
 
