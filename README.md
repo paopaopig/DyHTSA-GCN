@@ -3,19 +3,22 @@
 **Dynamic Hierarchical Temporal-Spatial-Attention Graph Convolutional Network for Essential Protein Prediction**
 <p align="center"> <img src="https://github.com/user-attachments/assets/72870af4-7c0b-48f1-b9bb-bce4ba8fed4f" width="90%"> </p> <p align="center"> <img src="https://img.shields.io/badge/Python-3.8+-blue"> <img src="https://img.shields.io/badge/PyTorch-DeepLearning-red"> <img src="https://img.shields.io/badge/Status-Research-green"> </p>
 
-📖 Overview
+## 📖 Overview
 
 This repository provides the official implementation of DyHTSA-GCN, a novel multi-branch graph neural network designed for essential protein prediction.
 
 The model integrates:
 
 ⏱️ Temporal dynamics (gene expression evolution)
+
 🧭 Spatial information (subcellular localization)
+
 🧬 Evolutionary signals (orthologous relationships)
+
 🎯 Cross-layer attention mechanisms
 
 
-📚 Table of Contents
+## 📚 Table of Contents
 Overview
 Data Preprocessing
 Training & Evaluation
@@ -24,11 +27,11 @@ Usage
 Reproducibility
 Citation
 
-🚀 1. Data Preprocessing
+## 🚀 1. Data Preprocessing
 
 All preprocessing scripts are located in the `preprocessing/` directory.
 
-🔧 Entry Point
+## 🔧 Entry Point
 
 #### `data_preprocess.py` (run first)
 
@@ -41,7 +44,7 @@ This script orchestrates the full preprocessing pipeline.
 - `k_value` — threshold for dynamic network construction  
 - `q_th` — threshold for orthologous information  
 
-🧬 Step 1 — Gene & Label Construction
+## 🧬 Step 1 — Gene & Label Construction
 
 #### `name_spin_labels_process.py`
 
@@ -51,7 +54,7 @@ Generates:
 - Protein–protein interaction adjacency matrix (SPIN)  
 - Essential protein labels  
 
-🌐 Step 2 — Dynamic Network Construction
+## 🌐 Step 2 — Dynamic Network Construction
 
 #### `dynamic_network_generate.py`
 
@@ -62,7 +65,7 @@ Constructs:
 
 The dynamic network is controlled by parameter `k_value`.
 
-🧭 Step 3 — Subcellular Features (Optional)
+## 🧭 Step 3 — Subcellular Features (Optional)
 
 #### `sub_data_1024_process.py`
 
@@ -70,7 +73,7 @@ If subcellular localization data are available:
 
 - Generates spatial feature matrix  
 
-🧩 Step 4 — Multi-layer Network Construction
+## 🧩 Step 4 — Multi-layer Network Construction
 
 #### `multi-layer_network_construction.py`
 
@@ -84,7 +87,7 @@ The orthologous network is filtered using `q_th`.
 
 ---
 
-🧪 2. Training & Evaluation
+## 🧪 2. Training & Evaluation
 
 🔧 Entry Point
 
@@ -104,7 +107,7 @@ Pipeline includes:
 4. Training  
 5. Evaluation  
 
-📦 Data Integration
+## 📦 Data Integration
 
 #### `data_load.py`
 
@@ -113,7 +116,7 @@ Responsible for:
 - Loading preprocessed features  
 - Constructing multi-layer graph inputs  
 
-🧠 Model Architecture
+## 🧠 Model Architecture
 
 #### `model.py`
 
@@ -127,11 +130,11 @@ Implements the DyHTSA-GCN architecture:
 
 ---
 
-⚙️ Command-line Arguments
+## ⚙️ Command-line Arguments
 
 All scripts support command-line arguments for flexible configuration.
 
-❗ Core Parameters (Must Match)
+## ❗ Core Parameters (Must Match)
 
 The following parameters **must remain consistent between preprocessing and training**:
 
@@ -147,7 +150,7 @@ Otherwise:
 - files cannot be located  
 - incorrect data may be loaded  
 
-📌 Main Arguments
+## 📌 Main Arguments
 
 
 | Argument                |        Default | Description                                |
@@ -203,9 +206,9 @@ Otherwise:
 
 ---
 
-⚡ Quick Start
+## ⚡ Quick Start
 
-🧬 Default (S.cerevisiae — Paper Setting)
+## 🧬 Default (S.cerevisiae — Paper Setting)
 
 ```bash
 python preprocessing/data_preprocess.py \
@@ -221,7 +224,7 @@ python train_and_test.py \
     --q_th 30
 ```
 
-🪰 Example (Drosophila melanogaster)
+## 🪰 Example (Drosophila melanogaster)
 
 ```bash
 python preprocessing/data_preprocess.py \
@@ -239,7 +242,7 @@ python train_and_test.py \
 
 ---
 
-🔁 Reproducibility Notes
+## 🔁 Reproducibility Notes
 
 - Preprocessing must be completed before training  
 - All parameters must remain consistent  
@@ -255,7 +258,7 @@ data_k=3.00_q=30.pt
 
 ---
 
-⭐ Summary
+## ⭐ Summary
 
 The full workflow is:
 
