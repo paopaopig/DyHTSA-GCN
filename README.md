@@ -3,6 +3,8 @@
 **Dynamic Hierarchical Temporal-Spatial-Attention Graph Convolutional Network for Essential Protein Prediction**
 
 ## Pipeline Overview
+<img width="4095" height="2345" alt="3aa7f0f768cc56ca7680638f1ffef7b4" src="https://github.com/user-attachments/assets/72870af4-7c0b-48f1-b9bb-bce4ba8fed4f" />
+
 
 This project provides the complete pipeline for reproducing **DyHTSA-GCN**, including:
 
