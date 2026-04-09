@@ -14,15 +14,9 @@ The model integrates:
 🧬 Evolutionary signals (orthologous relationships)
 🎯 Cross-layer attention mechanisms
 
-🧠 Pipeline Overview
-
-The complete workflow is illustrated below:
-
-<p align="center"> <img src="https://github.com/user-attachments/assets/72870af4-7c0b-48f1-b9bb-bce4ba8fed4f" width="90%"> </p>
 
 📚 Table of Contents
 Overview
-Pipeline Overview
 Data Preprocessing
 Training & Evaluation
 Arguments
